@@ -9,7 +9,7 @@
 		"format": "prettier --write ."
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-node": "next",
+		"@sveltejs/adapter-static": "https://gitpkg.now.sh/sveltejs/kit/packages/adapter-static?1e2f07033897e8d56c7edb6f20e650f41f5b1410",
 		"@sveltejs/kit": "next",
 		"@typescript-eslint/eslint-plugin": "^4.19.0",
 		"@typescript-eslint/parser": "^4.19.0",
