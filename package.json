@@ -9,6 +9,7 @@
 		"format": "prettier --write ."
 	},
 	"devDependencies": {
+		"@mapbox/rehype-prism": "^0.6.0",
 		"@sveltejs/adapter-static": "https://gitpkg.now.sh/sveltejs/kit/packages/adapter-static?1e2f07033897e8d56c7edb6f20e650f41f5b1410",
 		"@sveltejs/kit": "next",
 		"@typescript-eslint/eslint-plugin": "^4.19.0",
@@ -18,12 +19,22 @@
 		"eslint-plugin-svelte3": "^3.1.0",
 		"prettier": "~2.2.1",
 		"prettier-plugin-svelte": "^2.2.0",
+		"rehype-stringify": "^8.0.0",
+		"remark-breaks": "^2.0.2",
+		"remark-emoji": "^2.2.0",
+		"remark-extract-frontmatter": "^3.1.0",
+		"remark-frontmatter": "^3.0.0",
+		"remark-gfm": "^1.0.0",
+		"remark-parse": "^9.0.0",
+		"remark-rehype": "^8.1.0",
 		"sass": "^1.0.0",
 		"svelte": "^3.29.0",
 		"svelte-preprocess": "^4.0.0",
 		"tslib": "^2.0.0",
 		"typescript": "^4.0.0",
-		"vite": "^2.1.0"
+		"unified": "^9.2.1",
+		"vite": "^2.1.0",
+		"yaml": "^1.10.2"
 	},
 	"type": "module"
 }
