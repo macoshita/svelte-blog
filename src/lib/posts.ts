@@ -3,7 +3,7 @@ import path from 'path';
 import unified from 'unified';
 import parse from 'remark-parse';
 import frontmatter from 'remark-frontmatter';
-import { parse as yaml } from 'yaml';
+import yaml from 'yaml';
 import extractFrontmatter from 'remark-extract-frontmatter';
 import gfm from 'remark-gfm';
 import breaks from 'remark-breaks';
@@ -15,7 +15,7 @@ import html from 'rehype-stringify';
 const processor = unified()
 	.use(parse)
 	.use(frontmatter)
-	.use(extractFrontmatter, { yaml })
+	.use(extractFrontmatter, { yaml: yaml.parse })
 	.use(gfm)
 	.use(breaks)
 	.use(emoji)
