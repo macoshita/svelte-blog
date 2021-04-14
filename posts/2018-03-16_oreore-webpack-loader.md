@@ -29,9 +29,9 @@ published: true
 module.exports = {
   build: {
     extend(config) {
-      config.resolveLoader.modules.push(path.resolve(__dirname, "loaders"));
-    },
-  },
+      config.resolveLoader.modules.push(path.resolve(__dirname, 'loaders'));
+    }
+  }
 };
 ```
 

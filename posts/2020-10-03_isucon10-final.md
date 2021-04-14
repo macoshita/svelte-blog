@@ -1,5 +1,5 @@
 ---
-title: "ISUCON 10 完全敗北してきた"
+title: 'ISUCON 10 完全敗北してきた'
 category: isucon10-final
 tags:
 created_at: 2020-10-03 00:00:00 +0900

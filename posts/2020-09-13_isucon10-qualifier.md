@@ -1,5 +1,5 @@
 ---
-title: "ISUCON 10 予選通過してきた"
+title: 'ISUCON 10 予選通過してきた'
 category: isucon10-qualifier
 tags:
 created_at: 2020-09-13 00:00:00 +0900

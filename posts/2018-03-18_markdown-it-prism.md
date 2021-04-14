@@ -14,9 +14,9 @@ Apply syntax highlighting to fenced code blocks.
 In README.md, use [highlight.js](https://highlightjs.org/) as highlighting engine, but can also use [Prism](http://prismjs.com/).
 
 ```js
-const MarkdownIt = require("markdown-it");
-const Prism = require("prismjs");
-require("prismjs/components/prism-javascript");
+const MarkdownIt = require('markdown-it');
+const Prism = require('prismjs');
+require('prismjs/components/prism-javascript');
 
 const md = new MarkdownIt({
   highlight(str, lang) {
@@ -30,7 +30,7 @@ const md = new MarkdownIt({
     }
 
     return `<pre class="language-${lang}"><code class="language-${lang}">${hl}</code></pre>`;
-  },
+  }
 });
 ```
 

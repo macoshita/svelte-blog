@@ -1,7 +1,7 @@
 ---
-title: "Rust で frontmatter と markdown を処理する WASM を書いた"
+title: 'Rust で frontmatter と markdown を処理する WASM を書いた'
 category: 2020-12-01-rust-wasm-frontmatter-markdown
-tags: 
+tags:
 created_at: 2020-11-05 02:04:11 +0900
 updated_at: 2020-12-04 02:03:47 +0900
 published: true
@@ -17,7 +17,7 @@ GitHub は[こちら](https://github.com/macoshita/wasm-frontmatter-markdown)で
 ### 何に使ったか
 
 このブログが next.js 製なんだけど、それの markdown パースに使ってる。
-↓の気になる点はあるものの、記事のパース自体はやっぱそこそこ高速。
+↓ の気になる点はあるものの、記事のパース自体はやっぱそこそこ高速。
 記事の更新エディタに esa を使っているので、そっちもいずれ記事にしたい。
 
 ## Rust で WASM を作る勉強の流れ
@@ -33,9 +33,9 @@ Rust の経験も薄いし WASM は初体験だったので勉強した。
 ### 必要なツール
 
 - wasm-pack
-    - build サブコマンドで node.js, browser で実行できる wasm を js 付きで吐き出してくれて、さらに login, publish サブコマンドで npm に publish まで出来る
+  - build サブコマンドで node.js, browser で実行できる wasm を js 付きで吐き出してくれて、さらに login, publish サブコマンドで npm に publish まで出来る
 - cargo generate
-    - 雛形作る以外には使わなかった
+  - 雛形作る以外には使わなかった
 
 ## 実装ポイント
 
@@ -43,7 +43,7 @@ Rust の経験も薄いし WASM は初体験だったので勉強した。
 
 [pulldown-cmark](https://github.com/raphlinus/pulldown-cmark) は Rust 製の markdown パーサー。プル方式のパーサーで、AST に手を入れるのが簡単で、かつ速いという特徴がある。
 [このあたりのコード](https://github.com/macoshita/wasm-frontmatter-markdown/blob/660e8186199dc997d7489714124d0306e8b4ca6c/src/utils.rs#L42) が Syntect でコードブロックを処理する AST を作っているところ。
-大体こんな流れで処理している↓
+大体こんな流れで処理している ↓
 
 1. コードブロックが始まったらフラグを立てる
 1. その間に差し込まれるテキストは一旦別変数に保持
@@ -58,9 +58,9 @@ Rust の経験も薄いし WASM は初体験だったので勉強した。
 
 syntect の SyntaxSet, ThemeSet、絵文字の replacer など、一回初期化してあとはそれを再利用したいものがちょこちょこあった。
 まず例として出てきたのは [lazy_static](https://crates.io/crates/lazy_static) だったのだけど、これは結構書き方が覚えにくいと感じたので、[once_cell](https://crates.io/crates/once_cell) に移行した。
-が、これはこれで `Lazy::new(|| {` の  `||` 意味がまだわかっていない。。
+が、これはこれで `Lazy::new(|| {` の `||` 意味がまだわかっていない。。
 
-追記: 単に引数が空の Closure だった :joy: 
+追記: 単に引数が空の Closure だった :joy:
 
 ### yaml -> json
 

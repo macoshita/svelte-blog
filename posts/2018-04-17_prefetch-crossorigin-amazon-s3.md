@@ -37,15 +37,14 @@ This cache has no CORS headers. :cry:
     <h1>crossorigin prefetch test (maybe success)</h1>
     <a id="test" href="javascript:void(0)">Click to load script</a>
     <script>
-      document.getElementById("test").addEventListener(
-        "click",
+      document.getElementById('test').addEventListener(
+        'click',
         function () {
-          const script = document.createElement("script");
-          script.src =
-            "https://s3-ap-northeast-1.amazonaws.com/macoshita-test-crossorigin/main.js";
-          script.crossOrigin = "crossorigin";
+          const script = document.createElement('script');
+          script.src = 'https://s3-ap-northeast-1.amazonaws.com/macoshita-test-crossorigin/main.js';
+          script.crossOrigin = 'crossorigin';
 
-          document.getElementsByTagName("head")[0].appendChild(script);
+          document.getElementsByTagName('head')[0].appendChild(script);
         },
         false
       );
