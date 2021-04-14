@@ -28,14 +28,27 @@
 
 <script lang="ts">
 	import type { PostData } from '$lib/posts';
+	import { formatDate } from '$lib/util';
 
 	export let post: PostData;
+	$: createdAt = formatDate(post.createdAt);
 </script>
 
 <svelte:head>
 	<title>{post.title} / @macoshita</title>
 </svelte:head>
 
-<h1>{post.title}</h1>
+<time class="time">{createdAt}</time>
+<h1 class="title">{post.title}</h1>
 
 {@html post.content}
+
+<style lang="scss">
+	.time {
+		color: var(--nc-ac-1);
+	}
+	.title {
+		padding: 0;
+		margin-bottom: 2rem;
+	}
+</style>

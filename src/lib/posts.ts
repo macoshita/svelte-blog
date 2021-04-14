@@ -33,7 +33,7 @@ interface FrontMatter {
 export interface PostDataSummary {
 	slug: string;
 	title: string;
-	createdAt: Date;
+	createdAt: string;
 }
 
 export interface PostData extends PostDataSummary {
@@ -62,7 +62,7 @@ async function fetchPosts(): Promise<PostData[]> {
 			return {
 				slug: fileName.match(/_(.+)\.md$/)[1],
 				title,
-				createdAt: new Date(created_at),
+				createdAt: created_at,
 				content
 			};
 		});
