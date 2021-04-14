@@ -43,7 +43,7 @@
 
   <section>
     {#each posts as post}
-      <a class="article" href={`/posts/${post.slug}`}>
+      <a sveltekit:prefetch class="article" href={`/posts/${post.slug}`}>
         <article>
           <time>{post.createdAt}</time>
           <h2>{post.title}</h2>

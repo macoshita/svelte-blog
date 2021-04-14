@@ -4,7 +4,7 @@
 </script>
 
 <header>
-  <h1><a class="blog-title" href="/">@macoshita</a></h1>
+  <h1><a sveltekit:prefetch class="blog-title" href="/">@macoshita</a></h1>
 </header>
 
 <slot />
