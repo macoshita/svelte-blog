@@ -13,6 +13,8 @@ module.exports = {
     // hydrate the <div id="svelte"> element in src/app.html
     target: '#svelte',
 
+    hydrate: false,
+
     vite: {
       ssr: {
         noExternal: Object.keys(pkg.dependencies || {})
