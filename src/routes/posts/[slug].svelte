@@ -3,7 +3,6 @@
 
 	export const load: Load = async ({ page, fetch }) => {
 		try {
-			console.log(page.params.slug);
 			let res = await fetch(`/api/posts/${page.params.slug}.json`);
 
 			if (res.ok) {
