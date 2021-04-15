@@ -46,9 +46,16 @@ load は next で言うところの `getStaticProps`, `getServerSideProps` だ�
 
 ### sveltekit:prefetch
 
-TBD
+https://kit.svelte.dev/docs#anchor-options-sveltekit-prefetch
+
+内部リンクにつけとくと、マウスカーソル当てたり、指が触れた瞬間（離れる前）に、リンク先のコンテンツを先読みしてくれる超クールな機能。
 
 ### hydrate
+
+Server Side Rendering のハイドレーションとは、ざっくりいうと「サーバ側がレンダリングした HTML を表示しつつ、クライアント側でも HTML を再レンダリングすることで差を埋める」みたいな話。
+「差」として多分いちばん重要なのはイベントハンドラで、こいつが設定されないと「クリックしたら開くはずのメニュー」とかが動かない。
+
+https://developers.google.com/web/updates/2019/02/rendering-on-the-web?hl=ja
 
 TBD
 
