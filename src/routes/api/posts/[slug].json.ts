@@ -6,5 +6,5 @@ export const get: RequestHandler = async ({ params }) => {
 
   const post = await getPost(slug);
 
-  return { body: post };
+  return { body: JSON.stringify(post) };
 };
